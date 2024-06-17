@@ -3,6 +3,7 @@ import Background from '@/assets/background.svg?react'
 import Kakao from '@/assets/kakao.svg?react'
 import Button from '@/common/Button';
 import { useNavigate } from 'react-router-dom';
+import {kakaoButtonHandler} from '@/util/kakao';
 
 
 function Main(){
@@ -21,7 +22,7 @@ function Main(){
                 <span className="bg-white">로그인 후 이용해보세요.</span>
                 <hr className="absolute w-10/12 bottom-3 -z-10 m-auto left-0 right-0"/>
             </div>
-            <Button content={"카카오톡으로 로그인"} SvgComponent={Kakao} handler={() => {}} className={"bg-kakao text-strong font-bold w-[358px] h-[51px] m-auto mt-5"} />
+            <Button content={"카카오톡으로 로그인"} SvgComponent={Kakao} handler={kakaoButtonHandler} className={"bg-kakao text-strong font-bold w-[358px] h-[51px] m-auto mt-5"} />
             <Button content={"로그인 하러 가기"} handler={() => {navigate('/login')}} className={"bg-main text-white font-bold w-[358px] h-[51px] m-auto mt-5"} />
         </div>
 
